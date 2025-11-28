@@ -1,6 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
+
+//就是说从源节点开始
+//如果距离被更新变小，就把这个点放进队列
+//然后邻接表找这个点所有相邻的点进行更新，类似bfs进行层序的一种更新
 int n, m, s;
 vector<pair<int, int>> g[11111];
 queue<int> q;
@@ -42,6 +46,7 @@ void bfs()
 
     }
 }
+
 void solve()
 {
     cin >> n >> m >> s;
